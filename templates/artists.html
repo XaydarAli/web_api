@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Artists page</h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for artist in artists %}
+          <div class="col">
+            <div class="card">
+<!--              <img src="..." class="card-img-top" alt="...">-->
+              <div class="card-body">
+                    <p class="card-text">ID:{{artist.id}}</p>
+                <h5 class="card-title">Full_name: {{artist.first_name}} {{artist.last_name}}</h5>
+                <h5 class="card-title">Nickname:{{artist.username}} </h5>
+
+              </div>
+            </div>
+          </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
